@@ -1,0 +1,59 @@
+/* ItemList.css */
+.items-list {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  margin: 10px 0; /* Add some spacing between items */
+  padding: 10px; /* Add some padding around each item */
+  border: 1px solid #ddd; /* Add a border to each item */
+  border-radius: 8px; /* Round the corners of each item */
+  transition: all 0.4s ease; /* Smooth transition for resizing */
+  cursor: pointer;
+}
+
+.item-list__info div {
+  margin-top: 10px;
+}
+
+.item-list__img {
+  margin-right: 10px; /* Add spacing between the image and text */
+  display: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-list__img img {
+  width: 150px;
+}
+
+.item-list__info {
+  padding-top: 10px;
+  height: 150px;
+  display: flex;
+  flex-direction: column; /* Ensure the text items stack vertically */
+}
+.item-list__info-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Add some spacing below the title */
+  justify-content: start;
+}
+.item-list__info-meta {
+  font-size: smaller;
+  color: rgba(0, 0, 0, 0.3);
+}
+.item-list__info-price {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 3px; /* Add some spacing below meta and price */
+}
+
+@media (max-width: 768px) {
+  .items-list {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+  .item-list__img {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 10px; /* Add bottom margin on smaller screens */
+  }
+}
